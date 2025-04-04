@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -18,50 +19,63 @@
             font-family: 'Arial', sans-serif;
             text-align: center;
             overflow: hidden;
+            color: white;
         }
+
         .container {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(0, 0, 0, 0.8);
             padding: 20px;
             border-radius: 15px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            position: relative;
-            z-index: 1;
-            width: 30%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+            width: 90%;
+            max-width: 500px;
         }
-        iframe, img {
+
+        iframe {
             width: 100%;
             border-radius: 15px;
             margin: 10px 0;
         }
+
         h1, p {
             margin: 5px 0;
         }
+
         .slideshow {
             display: flex;
             overflow: hidden;
             border-radius: 15px;
             position: relative;
+            height: 250px;
         }
+
         .slide {
             min-width: 100%;
             transition: transform 0.5s ease;
             flex-shrink: 0;
+            object-fit: contain;
+            max-height: 100%;
         }
+
         .controls {
             display: flex;
             justify-content: center;
             gap: 10px;
             margin-top: 10px;
         }
+
         button {
             padding: 5px 10px;
             border: none;
             border-radius: 5px;
-            background-color: #f0f0f0;
+            background-color: #ffffff10;
+            color: white;
             cursor: pointer;
+            border: 1px solid white;
         }
+
         .timer {
-            font-size: 2em;
+            font-size: 1.5em;
             margin: 10px 0;
         }
     </style>
@@ -71,7 +85,7 @@
         <h1>Eu te amo, Momoin 💪❤️</h1>
         <iframe src="https://open.spotify.com/embed/track/0otRX6Z89qKkHkQ9OqJpKt" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
         <div class="slideshow" id="slideshow">
-           <img class="slide" src="https://pbs.twimg.com/media/GnuI82sXUAAtntQ?format=jpg&name=medium" alt="Foto 1">
+            <img class="slide" src="https://pbs.twimg.com/media/GnuI82sXUAAtntQ?format=jpg&name=medium" alt="Foto 1">
             <img class="slide" src="https://pbs.twimg.com/media/GnuI4rkWwAAUO2F?format=jpg&name=large" alt="Foto 2">
             <img class="slide" src="https://pbs.twimg.com/media/GnuI4l6XUAERk77?format=jpg&name=large" alt="Foto 3">
             <img class="slide" src="https://pbs.twimg.com/media/GnuI4rUWIAAIGhB?format=jpg&name=large" alt="Foto 4">
@@ -90,7 +104,9 @@
             <img class="slide" src="https://pbs.twimg.com/media/GnuJN4uWQAA1uaN?format=jpg&name=large" alt="Foto 17">
             <img class="slide" src="https://pbs.twimg.com/media/GnuJYFIW0AEh51c?format=jpg&name=large" alt="Foto 18">
             <img class="slide" src="https://pbs.twimg.com/media/GnuJN4uWQAA1uaN?format=jpg&name=large" alt="Foto 19">
-            <img class="slide" src="https://pbs.twimg.com/media/GnuJN4uXEAApgmu?format=jpg&name=medium" alt="Foto 20">        </div>
+            <img class="slide" src="https://pbs.twimg.com/media/GnuJN4uXEAApgmu?format=jpg&name=medium" alt="Foto 20">
+
+        </div>
         <div class="controls">
             <button onclick="showPreviousSlide()">&#9664; Voltar</button>
             <button onclick="showNextSlide()">Avançar &#9654;</button>
